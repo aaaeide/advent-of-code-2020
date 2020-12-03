@@ -7,10 +7,6 @@ example = [
     '2-9 c: ccccccccc',
 ]
 
-###################
-# HELPERS         #
-###################
-
 ParsedLine = Tuple[Tuple[int, int], str, str]
 
 
@@ -22,10 +18,6 @@ def parse_line(line: str) -> ParsedLine:
     string = splt[2]
 
     return ((min, max), char, string)
-
-########################
-# Part 1: Check count  #
-########################
 
 
 def ct_reduce(char: str) -> Callable[[int, str], int]:
@@ -40,30 +32,23 @@ def ct_check(parsed: ParsedLine) -> bool:
 
     return reduce(ct_reduce(char), string, 0) in range(min, max+1)
 
-###########################
-# Part 2: Check positions #
-###########################
-
 
 def pos_check(parsed: ParsedLine) -> bool:
     (positions, char, string) = parsed
 
     return reduce(lambda x, y: x ^ y, [string[pos-1] == char for pos in positions])
 
-#####################
-# Do the damn thing #
-#####################
+
+def part1():
+    with open('i02.txt', 'r') as f:
+        return len([line for line in f.readlines() if ct_check(parse_line(line))])
 
 
-def check_lines(lines: List[str]) -> Tuple[int, int]:
-
-    accepted1 = [line for line in lines if ct_check(parse_line(line))]
-    accepted2 = [line for line in lines if pos_check(parse_line(line))]
-
-    return (len(accepted1), len(accepted2))
+def part2():
+    with open('i02.txt', 'r') as f:
+        return len([line for line in f.readlines() if pos_check(parse_line(line))])
 
 
-with open('i02.txt', 'r') as f:
-    print('EXPECTED:\n(2,1)\n(536,558)\n\nACTUAL:')
-    print(check_lines(example))
-    print(check_lines(f.readlines()))
+if __name__ == "__main__":
+    print(f'PART 1:\t{part1()}')
+    print(f'PART 2:\t{part2()}')
