@@ -12,14 +12,14 @@ def find_3sum(arr, target):
 
 
 def part1():
-    with open('i01.txt', 'r') as inp:
+    with open('inputs/i01.txt', 'r') as inp:
         int_inp = [int(i_str) for i_str in inp.readlines()]
         sol = find_2sum(int_inp, 2020)
     return sol
 
 
 def part2():
-    with open('i01.txt', 'r') as inp:
+    with open('inputs/i01.txt', 'r') as inp:
         int_inp = [int(i_str) for i_str in inp]
         sol = find_3sum(int_inp, 2020)
     return sol

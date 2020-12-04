@@ -11,7 +11,7 @@ def trees_hit_for_slope(steps_right: int, steps_down: int, map: List[str]) -> in
 
 
 if __name__ == '__main__':
-    with open('i03.txt', 'r') as f:
+    with open('inputs/i03.txt', 'r') as f:
         map = [line.strip() for line in f.readlines()]
         slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
         results = [trees_hit_for_slope(right, down, map)
@@ -23,13 +23,13 @@ if __name__ == '__main__':
 
 
 def part1():
-    with open('i03.txt', 'r') as f:
+    with open('inputs/i03.txt', 'r') as f:
         map = [line.strip() for line in f.readlines()]
         return trees_hit_for_slope(3, 1, map)
 
 
 def part2():
-    with open('i03.txt', 'r') as f:
+    with open('inputs/i03.txt', 'r') as f:
         map = [line.strip() for line in f.readlines()]
         slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
         results = [trees_hit_for_slope(right, down, map)

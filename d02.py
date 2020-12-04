@@ -40,12 +40,12 @@ def pos_check(parsed: ParsedLine) -> bool:
 
 
 def part1():
-    with open('i02.txt', 'r') as f:
+    with open('inputs/i02.txt', 'r') as f:
         return len([line for line in f.readlines() if ct_check(parse_line(line))])
 
 
 def part2():
-    with open('i02.txt', 'r') as f:
+    with open('inputs/i02.txt', 'r') as f:
         return len([line for line in f.readlines() if pos_check(parse_line(line))])
 
 
