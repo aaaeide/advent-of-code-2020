@@ -35,6 +35,17 @@ def d03():
         f"Ran part2() {number} times, average result: {do_timeit('d03p2()', locals(), number)} seconds")
 
 
+def d04():
+    from d04 import parse_and_count_valid
+    print("\nBENCHMARK DAY 04:")
+    number = 100
+    with open('inputs/i04.txt', 'r') as f:
+        inp = f.read()
+        print(
+            f"Ran parse_and_count_valid() {number} times, average result: {do_timeit('parse_and_count_valid(inp)', locals(), number)} seconds")
+
+
 d01()
 d02()
 d03()
+d04()
