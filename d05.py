@@ -1,19 +1,17 @@
 from typing import Tuple, List
 
 
-def select_half(tup: Tuple[int, int], which_half: str) -> Tuple[int, int]:
-    (lower, upper) = tup
-    if which_half == "upper":
-        return (lower + (upper-lower)//2 + 1, upper)
-    return (lower, lower + (upper-lower)//2)
+def determine(tup, code):
+    for half in code:
+        (lower, upper) = tup
+        if half in ("B", "R"):
+            tup = (lower + (upper-lower)//2 + 1, upper)
+        else:
+            tup = (lower, lower + (upper-lower)//2)
+    return tup[0]
 
 
 def determine_seat_id(code: str) -> int:
-    def determine(tup, code):
-        for half in code:
-            tup = select_half(tup, "upper" if half in ("B", "R") else "lower")
-        return tup[0]
-
     row = determine((0, 127), code[:7])
     col = determine((0, 7), code[7:])
     return row*8 + col

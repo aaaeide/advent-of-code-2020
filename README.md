@@ -19,6 +19,6 @@ BENCHMARK DAY 04:
 Ran parse_and_count_valid() 100 times, average result: 0.00413 seconds
 
 BENCHMARK DAY 05:
-Part 1: Ran max_seat_id() 100 times, average result: 0.00305 seconds
-Part 2: Ran find_seat() 100 times, average result: 0.00309 seconds
+Part 1: Ran max_seat_id() 100 times, average result: 0.00207 seconds
+Part 2: Ran find_seat() 100 times, average result: 0.00216 seconds
 ```
