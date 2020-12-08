@@ -57,8 +57,19 @@ def d05():
             f"Part 2: Ran find_seat() {number} times, average result: {do_timeit('find_seat(codes)', locals(), number)} seconds")
 
 
+def d06():
+    from d06 import solve
+    print("\nBENCHMARK DAY 06:")
+    number = 100
+    with open('inputs/i06.txt', 'r') as f:
+        inp = f.read()
+        print(
+            f"Ran solve() {number} times, average result: {do_timeit('solve(inp)', locals(), number)} seconds")
+
+
 d01()
 d02()
 d03()
 d04()
 d05()
+d06()
