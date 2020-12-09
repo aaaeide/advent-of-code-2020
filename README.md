@@ -24,4 +24,8 @@ Part 2: Ran find_seat() 100 times, average result: 0.00216 seconds
 
 BENCHMARK DAY 06:
 Ran solve() 100 times, average result: 0.00623 seconds
+
+BENCHMARK DAY 07:
+Ran part1() 100 times, average result: 0.03604 seconds
+Ran part2() 100 times, average result: 0.00275 seconds
 ```

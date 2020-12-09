@@ -67,9 +67,22 @@ def d06():
             f"Ran solve() {number} times, average result: {do_timeit('solve(inp)', locals(), number)} seconds")
 
 
+def d07():
+    from d07 import part1 as d07p1, part2 as d07p2
+    print("\nBENCHMARK DAY 07:")
+    number = 100
+    with open('inputs/i07.txt', 'r') as f:
+        inp = f.read()
+        print(
+            f"Ran part1() {number} times, average result: {do_timeit('d07p1(inp)', locals(), number)} seconds")
+        print(
+            f"Ran part2() {number} times, average result: {do_timeit('d07p2(inp)', locals(), number)} seconds")
+
+
 d01()
 d02()
 d03()
 d04()
 d05()
 d06()
+d07()
