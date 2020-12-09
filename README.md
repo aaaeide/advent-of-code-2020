@@ -37,4 +37,8 @@ Ran part2() 100 times, average result: 0.00246 seconds
 BENCHMARK DAY 08:
 Ran part1() 100 times, average result: 0.00069 seconds
 Ran part2() 100 times, average result: 0.05584 seconds
+
+BENCHMARK DAY 09:
+PART 1: Ran find_weird_num() 100 times, average result: 0.00788 seconds
+PART 2: Ran find_weird_sum() 100 times, average result: 0.31751 seconds
 ```

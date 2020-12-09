@@ -91,6 +91,19 @@ def d08():
             f"Ran part2() {number} times, average result: {do_timeit('d08p2(inp)', locals(), number)} seconds")
 
 
+def d09():
+    from d09 import find_weird_sum, find_weird_num
+    print("\nBENCHMARK DAY 09:")
+    number = 100
+    with open('inputs/i09.txt', 'r') as f:
+        numbers = [int(line) for line in f.readlines()]
+        print(
+            f"PART 1: Ran find_weird_num() {number} times, average result: {do_timeit('find_weird_num(25, numbers)', locals(), number)} seconds")
+        sol_p1 = find_weird_num(25, numbers)
+        print(
+            f"PART 2: Ran find_weird_sum() {number} times, average result: {do_timeit('find_weird_sum(sol_p1, numbers)', locals(), number)} seconds")
+
+
 d01()
 d02()
 d03()
@@ -99,3 +112,4 @@ d05()
 d06()
 d07()
 d08()
+d09()
