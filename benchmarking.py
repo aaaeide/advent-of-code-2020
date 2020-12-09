@@ -79,6 +79,18 @@ def d07():
             f"Ran part2() {number} times, average result: {do_timeit('d07p2(inp)', locals(), number)} seconds")
 
 
+def d08():
+    from d08 import part1 as d08p1, part2 as d08p2
+    print("\nBENCHMARK DAY 08:")
+    number = 100
+    with open('inputs/i08.txt', 'r') as f:
+        inp = f.read().strip()
+        print(
+            f"Ran part1() {number} times, average result: {do_timeit('d08p1(inp)', locals(), number)} seconds")
+        print(
+            f"Ran part2() {number} times, average result: {do_timeit('d08p2(inp)', locals(), number)} seconds")
+
+
 d01()
 d02()
 d03()
@@ -86,3 +98,4 @@ d04()
 d05()
 d06()
 d07()
+d08()

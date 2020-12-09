@@ -33,4 +33,8 @@ BENCHMARK DAY 07 (After memoization):
 Ran part1() 100 times, average result: 0.00306 seconds
 Ran part2() 100 times, average result: 0.00246 seconds
 > 10x improvement for part 1!
+
+BENCHMARK DAY 08:
+Ran part1() 100 times, average result: 0.00069 seconds
+Ran part2() 100 times, average result: 0.05584 seconds
 ```
