@@ -25,35 +25,48 @@ def create_dag(inp: str) -> Dag:
 
 
 def find_num_parents(dag: Dag, goal: str) -> int:
-    def find_node(dag: Dag, start: str, goal: str) -> bool:
+    memo: Dict[str, bool] = {}
+
+    def find_node(start: str) -> bool:
+        if start in memo:
+            return memo[start]
+
         children = dag[start]
+        res = False
 
         if goal in children:
-            return True
-        if len(children) == 0:
-            return False
+            res = True
+        else:
+            for child in children:
+                if find_node(child):
+                    res = True
 
-        for child in children:
-            if find_node(dag, child, goal):
-                return True
-        return False
+        memo[start] = res
+        return res
 
     parents_found = 0
     for node in dag:
-        if find_node(dag, node, goal):
+        if find_node(node):
             parents_found += 1
 
     return parents_found
 
 
 def find_total_num_bags(dag: Dag, start: str) -> int:
-    children = dag[start]
-    total_bags = 1  # the bag itself
+    memo: Dict[str, int] = {}
 
-    for child in children:
-        total_bags += children[child] * find_total_num_bags(dag, child)
+    def memoized_inner(start: str):
+        if start in memo:
+            return memo[start]
 
-    return total_bags
+        children = dag[start]
+        total_bags = 1  # the bag itself
+        for child in children:
+            total_bags += children[child] * find_total_num_bags(dag, child)
+
+        memo[start] = total_bags
+        return total_bags
+    return memoized_inner(start)
 
 
 def part1(inp: str):

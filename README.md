@@ -25,7 +25,12 @@ Part 2: Ran find_seat() 100 times, average result: 0.00216 seconds
 BENCHMARK DAY 06:
 Ran solve() 100 times, average result: 0.00623 seconds
 
-BENCHMARK DAY 07:
+BENCHMARK DAY 07 (Before memoization):
 Ran part1() 100 times, average result: 0.03604 seconds
 Ran part2() 100 times, average result: 0.00275 seconds
+
+BENCHMARK DAY 07 (After memoization):
+Ran part1() 100 times, average result: 0.00306 seconds
+Ran part2() 100 times, average result: 0.00246 seconds
+> 10x improvement for part 1!
 ```
