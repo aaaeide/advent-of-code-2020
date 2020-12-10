@@ -41,4 +41,8 @@ Ran part2() 100 times, average result: 0.05584 seconds
 BENCHMARK DAY 09:
 PART 1: Ran find_weird_num() 100 times, average result: 0.00788 seconds
 PART 2: Ran find_weird_sum() 100 times, average result: 0.31751 seconds
+
+BENCHMARK DAY 10:
+PART 1: Ran greedy_longest_path() 100 times, average result: 0.00021 seconds
+PART 2: Ran find_num_paths() 100 times, average result: 0.00035 seconds
 ```

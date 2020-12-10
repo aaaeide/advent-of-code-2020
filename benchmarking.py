@@ -104,12 +104,16 @@ def d09():
             f"PART 2: Ran find_weird_sum() {number} times, average result: {do_timeit('find_weird_sum(sol_p1, numbers)', locals(), number)} seconds")
 
 
-d01()
-d02()
-d03()
-d04()
-d05()
-d06()
-d07()
-d08()
-d09()
+def d10():
+    from d10 import greedy_longest_path, find_num_paths
+    print("\nBENCHMARK DAY 10:")
+    number = 100
+    with open('inputs/i10.txt', 'r') as f:
+        adaps = [int(line) for line in f.readlines()]
+        print(
+            f"PART 1: Ran greedy_longest_path() {number} times, average result: {do_timeit('greedy_longest_path(adaps)', locals(), number)} seconds")
+        print(
+            f"PART 2: Ran find_num_paths() {number} times, average result: {do_timeit('find_num_paths(adaps)', locals(), number)} seconds")
+
+
+d10()
