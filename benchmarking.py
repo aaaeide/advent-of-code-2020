@@ -116,4 +116,16 @@ def d10():
             f"PART 2: Ran find_num_paths() {number} times, average result: {do_timeit('find_num_paths(adaps)', locals(), number)} seconds")
 
 
-d10()
+def d11():
+    from d11 import solve
+    print("\nBENCHMARK DAY 11:")
+    number = 100
+    with open('inputs/i11.txt', 'r') as f:
+        map = f.read().strip().split("\n")
+        print(
+            f"PART 1: Ran solve() {number} times, average result: {do_timeit('solve(map, part=1)', locals(), number)} seconds")
+        print(
+            f"PART 2: Ran solve() {number} times, average result: {do_timeit('solve(map, part=2)', locals(), number)} seconds")
+
+
+d11()
