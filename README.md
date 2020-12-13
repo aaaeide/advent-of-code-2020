@@ -49,4 +49,8 @@ PART 2: Ran find_num_paths() 100 times, average result: 0.00035 seconds
 BENCHMARK DAY 11:
 PART 1: Ran solve() 100 times, average result: 1.74533 seconds
 PART 2: Ran solve() 100 times, average result: 6.67888 seconds 😳
+
+BENCHMARK DAY 12:
+PART 1: Ran distance_travelled_p1() 100 times, average result: 0.00079 seconds
+PART 2: Ran distance_travelled_p2() 100 times, average result: 0.00073 seconds
 ```

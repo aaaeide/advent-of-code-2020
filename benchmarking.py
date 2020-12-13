@@ -128,4 +128,16 @@ def d11():
             f"PART 2: Ran solve() {number} times, average result: {do_timeit('solve(map, part=2)', locals(), number)} seconds")
 
 
-d11()
+def d12():
+    from d12 import distance_travelled_p1, distance_travelled_p2
+    print("\nBENCHMARK DAY 12:")
+    number = 100
+    with open('inputs/i12.txt', 'r') as f:
+        instrs = f.read().strip().split("\n")
+        print(
+            f"PART 1: Ran distance_travelled_p1() {number} times, average result: {do_timeit('distance_travelled_p1(instrs)', locals(), number)} seconds")
+        print(
+            f"PART 2: Ran distance_travelled_p2() {number} times, average result: {do_timeit('distance_travelled_p2(instrs)', locals(), number)} seconds")
+
+
+d12()
